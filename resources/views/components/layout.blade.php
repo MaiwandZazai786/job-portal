@@ -24,7 +24,7 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                                <a href="/home" aria-current="page"
+                                <a href="/" aria-current="page"
                                     class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Home</a>
                                 <a href="/about"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About
@@ -96,7 +96,7 @@
             <el-disclosure id="mobile-menu" hidden class="block md:hidden">
                 <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                    <a href="/home" aria-current="page"
+                    <a href="/" aria-current="page"
                         class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Home</a>
                     <a href="/about"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About
