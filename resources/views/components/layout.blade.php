@@ -18,18 +18,14 @@
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
                         <div class="shrink-0">
-                            <img src="{{ asset('/favicon.ico') }}" alt="Your Company" class="size-11" />
+                            <img src="{{ asset('/favicon.ico') }}" alt="Mr-Zazai" class="size-11" />
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                                <x-nav-link href="/" aria-current="page"
-                                    class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Home</x-nav-link>
-                                <x-nav-link href="/about"
-                                    class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">About
+                                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                                <x-nav-link href="/about" :active="request()->is('about')">About
                                     Us</x-nav-link>
-                                <x-nav-link href="/contact"
-                                    class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Contact</x-nav-link>
+                                <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
                             </div>
                         </div>
                     </div>
@@ -81,14 +77,10 @@
 
             <el-disclosure id="mobile-menu" hidden class="block md:hidden">
                 <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                    <x-nav-link href="/" aria-current="page"
-                        class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Home</x-nav-link>
-                    <x-nav-link href="/about"
-                        class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">About
+                    <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                    <x-nav-link href="/about" :active="request()->is('about')">About
                         Us</x-nav-link>
-                    <x-nav-link href="/contact"
-                        class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Contact</x-nav-link>
+                    <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
                 </div>
                 <div class="border-t border-white/10 pt-4 pb-3">
                     <div class="flex items-center px-5">
