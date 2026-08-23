@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    <title>{{ $heading }}</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 </head>
@@ -25,12 +24,12 @@
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                                 <x-nav-link href="/" aria-current="page"
-                                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Home</x-nav-link>
+                                    class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Home</x-nav-link>
                                 <x-nav-link href="/about"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About
+                                    class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">About
                                     Us</x-nav-link>
                                 <x-nav-link href="/contact"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</x-nav-link>
+                                    class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Contact</x-nav-link>
                             </div>
                         </div>
                     </div>
@@ -83,13 +82,13 @@
             <el-disclosure id="mobile-menu" hidden class="block md:hidden">
                 <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                    <a href="/" aria-current="page"
-                        class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Home</a>
-                    <a href="/about"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About
-                        Us</a>
-                    <a href="/contact"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
+                    <x-nav-link href="/" aria-current="page"
+                        class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Home</x-nav-link>
+                    <x-nav-link href="/about"
+                        class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">About
+                        Us</x-nav-link>
+                    <x-nav-link href="/contact"
+                        class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}  block rounded-md px-3 py-2 text-base font-medium">Contact</x-nav-link>
                 </div>
                 <div class="border-t border-white/10 pt-4 pb-3">
                     <div class="flex items-center px-5">
