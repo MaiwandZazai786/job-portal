@@ -2,7 +2,8 @@
     <x-slot:heading>
         Viewing Job
     </x-slot:heading>
-    <ul>
-        <li><strong>{{ $job['title'] }}:</strong> Pays ${{ $job['salary'] }} per year.</li>
-    </ul>
+
+    <h1 class="font-bold text-lg">{{ $job['title'] }}</h1>
+    <p>this job pays ${{ $job['salary'] }} per year.</p>
+
 </x-layout>

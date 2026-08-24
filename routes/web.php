@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Arr;
+
 
 Route::get('/', function () {
     return view('home');
@@ -53,11 +55,8 @@ Route::get('job/{id}', function ($id) {
         ],
 
     ];
-    $job = [];
-    foreach ($jobs as $curJob) {
-        if ($curJob['id'] == $id)
-            $job = $curJob;
-    }
+    $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
+
 
     return view('job', compact(['job']));
 });
