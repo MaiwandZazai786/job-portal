@@ -29,7 +29,7 @@ class Job extends Model
         ];
     }
 
-    public static function find(string $id): array
+    public static function find(string $id)
     {
         $job = Arr::first(Job::allJobs(), fn($job) => $job['id'] == $id);
         return $job;
