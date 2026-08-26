@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 
 class Job extends Model
 {
@@ -26,5 +27,11 @@ class Job extends Model
             ],
 
         ];
+    }
+
+    public static function find(string $id): array
+    {
+        $job = Arr::first(Job::allJobs(), fn($job) => $job['id'] == $id);
+        return $job;
     }
 }

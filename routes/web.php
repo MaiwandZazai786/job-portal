@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Arr;
+
 use App\Models\Job;
 
 
@@ -21,7 +21,6 @@ Route::get('contact', function () {
 
 Route::get('job/{id}', function ($id) {
 
-    $job = Arr::first(Job::allJobs(), fn($job) => $job['id'] == $id);
-
+    $job = Job::find($id);
     return view('job', compact(['job']));
 });
