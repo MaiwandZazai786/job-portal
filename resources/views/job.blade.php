@@ -9,6 +9,4 @@
         <h1>Job Not Found!</h1>
     @endif
 
-
-
 </x-layout>
