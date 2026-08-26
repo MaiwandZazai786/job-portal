@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        Viewing Job
+        Job
     </x-slot:heading>
 
     <h1 class="font-bold text-lg">{{ $job['title'] }}</h1>
