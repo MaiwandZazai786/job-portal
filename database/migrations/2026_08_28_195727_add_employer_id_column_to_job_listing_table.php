@@ -11,7 +11,9 @@ return new class extends Migration
     {
         Schema::table('job_listing', function (Blueprint $table) {
             $table->foreignId('employer_id')
-                ->constrained('employers', 'employer_id');
+                ->nullable()
+                ->constrained('employers', 'id')
+            ;
         });
     }
 
