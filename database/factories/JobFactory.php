@@ -11,6 +11,7 @@ class JobFactory extends Factory
     {
         return [
             'title' => fake()->jobTitle(),
+            'employer_id' => fake()->numberBetween(1, 50),
             'salary' => fake()->numberBetween(25000, 100000)
         ];
     }
