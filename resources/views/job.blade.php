@@ -1,9 +1,10 @@
 <x-layout>
     <x-slot:heading>
-        Job
+        Job Information
     </x-slot:heading>
     @if ($job)
         <h1 class="font-bold text-lg">{{ $job['title'] }}</h1>
+        <h1 class="font-bold text-lg">Employer: {{ $job->employer->name }}</h1>
         <p>this job pays ${{ $job['salary'] }} per year.</p>
     @elseif ($job === null)
         <h1>Job Not Found!</h1>
