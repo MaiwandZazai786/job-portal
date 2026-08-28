@@ -48,8 +48,8 @@
                                     class="relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                                     <span class="absolute -inset-1.5"></span>
                                     <span class="sr-only">Open user menu</span>
-                                    <img src="{{ asset('/me.png') }}" alt=""
-                                        class="size-11 rounded-full outline -outline-offset-1 outline-white/10" />
+                                    <img src="{{ asset('/profile.png') }}" alt=""
+                                        class="size-15 rounded-full outline -outline-offset-1 outline-white/10" />
                                 </button>
                             </el-dropdown>
                         </div>
@@ -83,8 +83,8 @@
                 <div class="border-t border-white/10 pt-4 pb-3">
                     <div class="flex items-center px-5">
                         <div class="shrink-0">
-                            <img src="{{ asset('/me.png') }}" alt=""
-                                class="size-10 rounded-full outline -outline-offset-1 outline-white/10" />
+                            <img src="{{ asset('/profile.png') }}" alt=""
+                                class="size-15 rounded-full outline -outline-offset-1 outline-white/10" />
                         </div>
                         <div class="ml-3">
                             <div class="text-base/5 font-medium text-white">Maiwand Zazai</div>
