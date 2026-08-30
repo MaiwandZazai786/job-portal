@@ -6,24 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('job_tag', function (Blueprint $table) {
             $table->id();
             $table->foreignId('job_listing_id')
-                ->constrained('job_listing', 'id');
+                ->constrained('job_listing', 'id')
+                ->cascadeOnDelete();
             $table->foreignId('tag_id')
-                ->constrained('tags', 'id');
+                ->constrained('tags', 'id')
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('job_tag');
