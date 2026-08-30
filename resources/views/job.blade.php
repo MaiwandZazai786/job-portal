@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        Job Information
+        Job Details
     </x-slot:heading>
     @if ($job)
         <h1 class="font-bold text-lg">{{ $job['title'] }}</h1>
