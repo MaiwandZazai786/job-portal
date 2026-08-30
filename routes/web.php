@@ -12,7 +12,7 @@ Route::get('contact', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::all();
+    $jobs = Job::with('employer')->get();
     return view('jobs', compact(['jobs']));
 });
 
