@@ -13,7 +13,7 @@ Route::get('contact', function () {
 
 Route::get('/jobs', function () {
     $jobs = Job::with('employer')->cursorPaginate(5);
-    return view('jobs.jobs', compact(['jobs']));
+    return view('jobs.index', compact(['jobs']));
 });
 
 Route::get('/jobs/{id}', function ($id) {
