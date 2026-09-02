@@ -12,11 +12,11 @@ Route::get('contact', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->paginate(5);
+    $jobs = Job::with('employer')->cursorPaginate(5);
     return view('jobs', compact(['jobs']));
 });
 
-Route::get('job/{id}', function ($id) {
+Route::get('jobs/{id}', function ($id) {
     $job = Job::find($id);
     return view('job', compact(['job']));
 });
