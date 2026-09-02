@@ -16,6 +16,10 @@ Route::get('/jobs', function () {
     return view('jobs.index', compact(['jobs']));
 });
 
+Route::get('/jobs/create', function () {
+    return view('jobs.create');
+});
+
 Route::get('/jobs/{id}', function ($id) {
     $job = Job::find($id);
     return view('jobs.show', compact(['job']));
