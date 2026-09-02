@@ -13,10 +13,10 @@ Route::get('contact', function () {
 
 Route::get('/jobs', function () {
     $jobs = Job::with('employer')->cursorPaginate(5);
-    return view('jobs', compact(['jobs']));
+    return view('jobs.jobs', compact(['jobs']));
 });
 
 Route::get('/jobs/{id}', function ($id) {
     $job = Job::find($id);
-    return view('job', compact(['job']));
+    return view('jobs.job', compact(['job']));
 });
