@@ -12,7 +12,7 @@ Route::get('contact', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->cursorPaginate(5);
+    $jobs = Job::with('employer')->latest()->cursorPaginate(5);
     return view('jobs.index', compact(['jobs']));
 });
 
@@ -23,4 +23,14 @@ Route::get('/jobs/create', function () {
 Route::get('/jobs/{id}', function ($id) {
     $job = Job::find($id);
     return view('jobs.show', compact(['job']));
+});
+
+Route::post('/jobs', function () {
+    Job::create([
+        'title' => request('title'),
+        'salary' => request('salary'),
+        'employer_id' => 1,
+    ]);
+
+    return redirect('/jobs');
 });
