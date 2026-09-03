@@ -2,8 +2,6 @@
     <x-slot:heading>
         Create Job
     </x-slot:heading>
-
-
     <form>
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
@@ -44,5 +42,4 @@
                 class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 hover:cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
         </div>
     </form>
-
 </x-layout>
