@@ -17,7 +17,13 @@
                                 class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                 <input id="title" type="text" name="title" placeholder="Software Engineer"
                                     class="block min-w-0 grow bg-white py-1.5 pr-3 px-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" />
+
                             </div>
+                            <span class="text-red-600 text-sm/6">
+                                @error('title')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
                     </div>
 
@@ -29,6 +35,11 @@
                                 <input id="salary" type="text" name="salary" placeholder="$100,000 per year."
                                     class="block min-w-0 grow bg-white py-1.5 pr-3 px-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" />
                             </div>
+                            <span class="text-red-600 text-sm/6">
+                                @error('salary')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
                     </div>
                 </div>
