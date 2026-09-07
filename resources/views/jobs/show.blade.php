@@ -10,4 +10,8 @@
         <h1>Job Not Found!</h1>
     @endif
 
+    <p class="mt-4">
+        <x-edit-button href="">Edit Job</x-edit-button>
+    </p>
+
 </x-layout>
