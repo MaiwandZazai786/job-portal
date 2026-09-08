@@ -50,11 +50,10 @@
         <div class="mt-6 flex items-center justify-between gap-x-6">
 
             <div class="flex items-center">
-                <x-delete-button>
+                <x-delete-button form="delete-job-form">
                     Delete Job
                 </x-delete-button>
             </div>
-
 
             <div class="flex items-center  gap-x-6">
                 <a href="/jobs/{{ $job->id }}"
@@ -63,5 +62,9 @@
                     class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 hover:cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
             </div>
         </div>
+    </form>
+    <form action="/jobs/{{ $job->id }}" method="POST" class="hidden" id="delete-job-form">
+        @method('DELETE')
+        @csrf
     </form>
 </x-layout>
