@@ -40,3 +40,8 @@ Route::post('/jobs', function () {
 
     return redirect('/jobs');
 });
+
+Route::get('/jobs/{id}/edit', function ($id) {
+    $job = Job::find($id);
+    return view('jobs.edit', compact(['job']));
+});

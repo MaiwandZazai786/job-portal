@@ -11,7 +11,7 @@
     @endif
 
     <p class="mt-4">
-        <x-edit-button href="">Edit Job</x-edit-button>
+        <x-edit-button href="/jobs/{{ $job->id }}/edit">Edit Job</x-edit-button>
     </p>
 
 </x-layout>
