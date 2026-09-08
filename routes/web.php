@@ -26,8 +26,7 @@ Route::get('/jobs/create', function () {
 
 
 //Show Job
-Route::get('/jobs/{id}', function ($id) {
-    $job = Job::findOrFail($id);
+Route::get('/jobs/{job}', function (Job $job) {
     return view('jobs.show', compact(['job']));
 });
 
@@ -50,24 +49,19 @@ Route::post('/jobs', function () {
 });
 
 //Edit Job
-Route::get('/jobs/{id}/edit', function ($id) {
-    $job = Job::findOrFail($id);
+Route::get('/jobs/{job}/edit', function (Job $job) {
     return view('jobs.edit', compact(['job']));
 });
 
 //Update Job
-Route::PATCH('/jobs/{id}', function ($id) {
+Route::PATCH('/jobs/{job}', function (Job $job) {
+    //autorize the user to update the job {On Hold for now...}
 
     //validate the request
-    $job = Job::findOrFail($id);
     request()->validate([
         'title' => ['required', 'min:3'],
         'salary' => ['required', 'min:3'],
     ]);
-
-    //autorize the user to update the job {On Hold for now...}
-
-
 
     //update the job
     $job->update([
@@ -79,13 +73,9 @@ Route::PATCH('/jobs/{id}', function ($id) {
 });
 
 //Delete Job
-Route::delete('/jobs/{id}', function ($id) {
+Route::delete('/jobs/{job}', function (Job $job) {
 
     //autorize the user to update the job {On Hold for now...}
-
-
-    //find the job
-    $job = Job::findOrFail($id);
 
     //delete the job
     $job->delete();
