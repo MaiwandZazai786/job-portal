@@ -3,14 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 
-Route::get('/', function () {
-    return view('home');
-});
+// Home page
+Route::view('/', 'home');
 
-Route::get('contact', function () {
-    return view('contact');
-});
-
+// Contact page
+Route::view('contact', 'contact');
 
 //Jobs
 Route::get('/jobs', [JobController::class, 'index']);
