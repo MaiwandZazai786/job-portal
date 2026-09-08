@@ -49,8 +49,8 @@
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <button type="button"
-                class="text-sm/6 font-semibold text-gray-900 hover:text-gray-600 hover:cursor-pointer">Cancel</button>
+            <a href="/jobs"
+                class="text-sm/6 font-semibold text-gray-900 hover:text-gray-600 hover:cursor-pointer">Cancel</a>
             <button type="submit"
                 class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 hover:cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
         </div>
