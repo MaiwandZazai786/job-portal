@@ -14,7 +14,8 @@ Route::view('contact', 'contact');
 Route::resource('jobs', JobController::class);
 
 // Register page
-Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
+Route::get('/register', [RegisterUserController::class, 'create']);
+Route::post('/register', [RegisterUserController::class, 'store']);
 
 // Login page
 Route::get('/login', function () {
