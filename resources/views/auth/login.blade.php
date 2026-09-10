@@ -33,8 +33,8 @@
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <a href="/"
-                class="text-sm/6 font-semibold text-gray-900 hover:text-gray-600    hover:cursor-pointer">Cancel</a>
-            <x-form-button>Login</x-form-button>
+                class="text-sm/6 font-semibold text-gray-900 hover:text-gray-600 hover:cursor-pointer">Cancel</a>
+            <x-form-button>Log In</x-form-button>
         </div>
     </form>
 </x-layout>
