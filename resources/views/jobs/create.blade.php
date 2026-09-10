@@ -10,21 +10,21 @@
                 <p class="mt-1 text-sm/6 text-gray-600">We just need a handful of details from you.</p>
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                    <div class="sm:col-span-4">
+                    <x-form-field>
                         <x-form-label for="title">Title</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="title" name="title" placeholder="Software Engineer" required />
+                            <x-form-input id="title" name="title" placeholder="Software Engineer" />
                             <x-form-error name="title" />
                         </div>
-                    </div>
+                    </x-form-field>
 
-                    <div class="sm:col-span-4">
+                    <x-form-field>
                         <x-form-label for="salary">Salary</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="salary" name="salary" placeholder="100000" required />
+                            <x-form-input id="salary" name="salary" placeholder="100000" />
                             <x-form-error name="salary" />
                         </div>
-                    </div>
+                    </x-form-field>
                 </div>
             </div>
         </div>
