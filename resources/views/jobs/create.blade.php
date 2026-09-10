@@ -21,7 +21,7 @@
                     <x-form-field>
                         <x-form-label for="salary">Salary</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="salary" name="salary" placeholder="100000" />
+                            <x-form-input id="salary" name="salary" placeholder="$10,000.00 USD" />
                             <x-form-error name="salary" />
                         </div>
                     </x-form-field>
@@ -31,9 +31,8 @@
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <a href="/jobs"
-                class="text-sm/6 font-semibold text-gray-900 hover:text-gray-600 hover:cursor-pointer">Cancel</a>
-            <button type="submit"
-                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 hover:cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                class="text-sm/6 font-semibold text-gray-900 hover:text-gray-600    hover:cursor-pointer">Cancel</a>
+            <x-form-button>Save</x-form-button>
         </div>
     </form>
 </x-layout>
