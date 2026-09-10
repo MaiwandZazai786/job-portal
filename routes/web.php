@@ -15,3 +15,7 @@ Route::resource('jobs', JobController::class);
 
 
 Route::get('/register', [RegisterUserController::class, 'create'])->name('register');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
