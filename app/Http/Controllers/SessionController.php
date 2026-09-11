@@ -15,4 +15,14 @@ class SessionController extends Controller
     {
         dd(request()->all());
     }
+    public function destroy(Request $request)
+    {
+
+        dd('logout');
+        // Auth::logout();
+        // $request->session()->invalidate();
+        // $request->session()->regenerateToken();
+
+        // return redirect('/login')->with('success', 'You have been logged out.');
+    }
 }
