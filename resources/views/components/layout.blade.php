@@ -34,6 +34,26 @@
                                 <x-nav-link href="/login" :active="request()->is('login')">Log In</x-nav-link>
                                 <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
                             @endguest
+
+                            @auth
+                                <form method="POST" action="/logout">
+                                    @csrf
+                                    <button type="submit"
+                                        class="group flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-white/70 transition-all duration-200 hover:bg-white/10 hover:text-white hover:cursor-pointer focus:outline-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.8" stroke="currentColor"
+                                            class="h-[18px] w-[18px] transition-all duration-200 group-hover:text-red-400">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18 12H9m0 0l3-3m-3 3l3 3" />
+                                        </svg>
+                                        <span class="transition-colors duration-200 group-hover:text-red-400">
+                                            Log out
+                                        </span>
+                                    </button>
+                                </form>
+                            @endauth
                         </div>
                     </div>
                     <div class="-mr-2 flex md:hidden">
