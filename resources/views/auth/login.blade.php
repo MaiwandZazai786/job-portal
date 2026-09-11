@@ -12,8 +12,8 @@
                     <x-form-field>
                         <x-form-label for="email">Email<span class="text-red-500">*</span></x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="email" name="email" type="email" placeholder="john@example.com"
-                                required />
+                            <x-form-input id="email" name="email" type="email" value="{{ old('email') }}"
+                                placeholder="john@example.com" required />
                             <x-form-error name="email" />
                         </div>
                     </x-form-field>
