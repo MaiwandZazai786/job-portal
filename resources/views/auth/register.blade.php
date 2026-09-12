@@ -9,7 +9,7 @@
 
                 <div class=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <x-form-field>
-                        <x-form-label for="first_name">FirstName<span class="text-red-500">*</span></x-form-label>
+                        <x-form-label for="first_name">First Name<span class="text-red-500">*</span></x-form-label>
                         <div class="mt-2">
                             <x-form-input id="first_name" name="first_name" placeholder="John" required />
                             <x-form-error name="first_name" />
