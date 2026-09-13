@@ -11,7 +11,7 @@
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <x-form-field>
-                        <x-form-label for="title">Title</x-form-label>
+                        <x-form-label for="title">Title<span class="text-sm text-red-500">*</span></x-form-label>
                         <div class="mt-2">
                             <x-form-input id="title" name="title" placeholder="Software Engineer" />
                             <x-form-error name="title" />
@@ -19,7 +19,7 @@
                     </x-form-field>
 
                     <x-form-field>
-                        <x-form-label for="salary">Salary</x-form-label>
+                        <x-form-label for="salary">Salary<span class="text-sm text-red-500">*</span></x-form-label>
                         <div class="mt-2">
                             <x-form-input id="salary" name="salary" placeholder="10,000.00 USD" />
                             <x-form-error name="salary" />
