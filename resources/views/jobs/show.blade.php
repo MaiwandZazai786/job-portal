@@ -10,7 +10,7 @@
         <h1>Job Not Found!</h1>
     @endif
 
-    @can('edit-job', $job)
+    @can('edit', $job)
         <p class="mt-4">
             <x-edit-button href="/jobs/{{ $job->id }}/edit">Edit Job</x-edit-button>
         </p>
