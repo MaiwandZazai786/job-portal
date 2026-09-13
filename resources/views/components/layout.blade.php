@@ -111,7 +111,9 @@
         <header class="relative bg-white shadow-sm">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:items-center sm:justify-between">
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
-                <x-create-button href="/jobs/create" class="mt-3 sm:mt-0">Create Job</x-create-button>
+                @auth
+                    <x-create-button href="/jobs/create" class="mt-3 sm:mt-0">Create Job</x-create-button>
+                @endauth
             </div>
         </header>
         <main>
