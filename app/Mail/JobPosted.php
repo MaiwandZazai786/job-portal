@@ -17,7 +17,7 @@ class JobPosted extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public $job)
     {
         //
     }
@@ -29,6 +29,7 @@ class JobPosted extends Mailable
     {
         return new Envelope(
             subject: 'Job Posted',
+            replyTo: 'sergio.maiwand@gmail.com'
         );
     }
 
@@ -39,6 +40,8 @@ class JobPosted extends Mailable
     {
         return new Content(
             view: 'mail.job-posted',
+            with: ['title' => $this->job->title]
+
         );
     }
 
