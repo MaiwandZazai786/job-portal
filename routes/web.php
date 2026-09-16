@@ -55,3 +55,12 @@ Route::get('/login', [SessionController::class, 'create'])->name('login');
 Route::post('/login', [SessionController::class, 'store']);
 
 Route::post('/logout', [SessionController::class, 'destroy']);
+
+Route::get('/test', function () {
+
+    dispatch(function () {
+        logger('Hello from the queue!');
+    });
+
+    return 'Done';
+});
