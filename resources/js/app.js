@@ -1,2 +1,1 @@
-//
-// alert('Hello from JavaScript!');
+import '@tailwindplus/elements';
